@@ -1,0 +1,18 @@
+/** Move the container indicator to the bottom of the tab **/
+#tabbrowser-tabs .tab-context-line { display: none; }
+#tabbrowser-tabs .tab-background {
+  border-radius: 0 !important;
+  border-bottom: solid 2px var(--identity-icon-color, #ccc) !important;
+  transition: all .15s ease-in-out !important;
+}
+#tabbrowser-tabs .tabbrowser-tab:not([usercontextid]) .tab-background {
+  border-color: transparent !important;
+}
+#tabbrowser-tabs .tab-background[selected="true"] {
+  border-bottom: solid 5px var(--identity-icon-color, #ccc) !important;
+}
+
+/* Dim the text on non-selected tabs */
+.tab-label:not([selected="true"]) {
+  color: #ddd !important;
+}
